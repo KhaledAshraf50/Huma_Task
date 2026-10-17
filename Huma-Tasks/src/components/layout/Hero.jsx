@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Button from "../ui/Button";
-import Card from "../ui/Card";
+import { Button } from "@/components/ui/Button";
 import Table from "../ui/Table";
+import CardChildren from "../ui/CardChildren";
 
 const Hero = () => {
   const [isBlue, setIsBlue] = useState(false);
@@ -24,13 +24,13 @@ const Hero = () => {
       />
       <h2>Cards Section</h2>
       <div style={{ display: "flex", gap: "20px" }}>
-        <Card
+        <CardChildren
           title="Card One"
           description="This is a simple card description without children."
           image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ0wApAJPUSi3amhWMXJysSyuCsTSyUnppg2NuD3emX6zXs-xuaJxM2s8EZIZL2AzhclnG5ppUvskp6YWoUDuKysKtSF_wu-QtJ-KjVU64Mh1RbwE2tG8s4&usqp=CAc"
         />
 
-        <Card
+        <CardChildren
           title="Card Two (With Children)"
           description="This card uses the children prop below:"
           children={
